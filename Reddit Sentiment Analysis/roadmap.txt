@@ -1,0 +1,6 @@
+1. Finetuning con dataset etiquetado de sentiment analysis.
+2. Scraping de subreddits relacionados con el tema a analizar.
+3. Clasificación del sentimiento de los hilos/comentarios. 
+4. Analysis de las predicciones.
+
+5. opt- Analysis con los datos del valor de los stocks.
