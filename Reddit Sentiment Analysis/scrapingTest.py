@@ -53,8 +53,7 @@ print(submission.upvote_ratio)
 print(submission.url)
 print(submission.num_comments)
 """
-hfy
-# TODO: Preparar el formato del csv;;
+# TODO: Preparar el formato del csv
 data = {
     'headlines': headlines,
     'body': body,
