@@ -1,0 +1,191 @@
+head,body,timestamp,num_comments,comments,images,text_images
+Introducing a new term: Brockism,"**Brockism** or potentially **Overhang Reductionism** (see discussion in comments) is a proposed name for one of four viewpoints represented in the famous 2023 societal debate about AGI safety taking place at OpenAI.  Thankfully, all four factions agree on the need to deal with x-risk, but disagree about how:
+
+(1) The ""normal"" faction, which includes Satya Nadella and almost every businessperson both in VC and on Wall Street.  Normals say (at least with their investment decisions, which speak infinitely louder than words) that we can deal with x-risk later.
+
+(2) The ""decel"" faction (short for ""decelerate""), which says to slow down AI research.
+
+(3) The ""e/acc"" faction (short for ""effective accelerationists"") is a trendy, recent term for optimistic techno-utopianism, in the milieu of Vernor Vinge's stories.
+
+(4) The ""Brockist"" faction (named after Greg Brockman). Brockists (*which may or may not include Brockman himself, as the idea was inspired by him but his own views have yet to be verified*) believe that the way to reduce x-risk is to accelerate AI software research while halting or slowing semiconductor development. They believe that if chips are too fast, we could stumble into unwantedly making an unaligned artificial superintelligence by accidentally inventing an algorithm that makes fuller use of existing chips. The difference between what we currently do with current chips vs what we \*could\* do with current chips is what Brockists call the ""**capabilities overhang**"".
+
+Brockman explains his position in the last 6 minutes of this TED Talk: [https://youtu.be/C\_78DM8fG6E?si=uIP2OIxV8dXAKr9B&t=1478](https://youtu.be/C_78DM8fG6E?si=uIP2OIxV8dXAKr9B&t=1478)
+
+Significant evidence for the Brockist position may be found in the accomplishments of the retro-computing ""demoscene"", which uses innovative software to produce computer graphics on par with the late 1990's on some of the very oldest personal computers.  See [en.wikipedia.org/wiki/Demoscene](https://en.wikipedia.org/wiki/Demoscene) and reddit.com/r/demoscene",23-11-2023 01:01:58,44,"[{'body': 'I would argue that Yann is not e/acc but ""normal"". He does not believe that an AGI that can cause an extinction is close.', 'timestamp': '23-11-2023 05:26:35'}, {'body': ""Here's a compilation of some of the most insane demos for the Commodore 64: [https://youtu.be/R7QL6-MrDnk?si=1xAqAfWMFKzOFB92&t=572](https://youtu.be/R7QL6-MrDnk?si=1xAqAfWMFKzOFB92&t=572)"", 'timestamp': '23-11-2023 01:07:21'}]",,
+I made a HUGE list of all GPTs Prompts scraped from the internet.,,23-11-2023 05:24:50,3,"[{'body': 'Downloaded it and after tyring to send it on gmail it said Virus detected :/', 'timestamp': '23-11-2023 09:16:37'}, {'body': 'So how does it work?', 'timestamp': '23-11-2023 09:35:20'}]",,
+He rose again in 3 days,,22-11-2023 22:50:42,20,"[{'body': 'Just know that this is cult shit at this point', 'timestamp': '22-11-2023 22:56:33'}, {'body': 'His biopic gonna be sick', 'timestamp': '23-11-2023 04:31:01'}]",<PIL.PngImagePlugin.PngImageFile image mode=RGBA size=900x921 at 0x1B897138640>,
+Why is AGI dangerous?,"Can someone explain this in clear, non dooms day language? 
+
+I understand the alignment problem. But I also see that with Q*, we can reward the process, which to me sounds like a good way to correct misalignment along the way. 
+
+I get why AGI could be misused by bad actors, but this can be said about most things.
+
+I'm genuinely curious, and trying to learn. It seems that most scientists are terrified, so I'm super interested in understanding this viewpoint in more details.",23-11-2023 01:15:55,283,"[{'body': 'I’ve heard some say this: Humans are at the top of the food chain. We’re the apex predator and the most dangerous, not because we’re the strongest or the fastest, but because we’re the smartest.\n\nWhat happens if we encounter, or develop a creature more intelligent than us?', 'timestamp': '23-11-2023 01:52:06'}, {'body': 'Because true AGI could replace humans in nearly every job function, and the people with the keys to it aren’t exactly going to be making sure that everyone benefits from that.', 'timestamp': '23-11-2023 01:46:26'}]",,
+What is Q*?,"Per a Reuters exclusive released moments ago, Altman's ouster was originally precipitated by the discovery of Q\* (Q-star), which supposedly was an AGI. The Board was alarmed (and same with Ilya) and thus called the meeting to fire him.
+
+Has anyone found anything else on Q\*?",22-11-2023 17:36:28,165,"[{'body': '[deleted]', 'timestamp': '22-11-2023 19:13:27'}, {'body': '“Bonjour Mon Captain”', 'timestamp': '22-11-2023 19:02:47'}]",,
+Sam Altman's ouster at OpenAI was precipitated by letter to board about AI breakthrough,,22-11-2023 17:12:44,168,"[{'body': 'Q-learning is a reinforcement learning algorithm. Deepmind used to achieve human level performance in Atari games. It seems like this Q* might be some variant of that, I wonder what they figured out.', 'timestamp': '22-11-2023 17:44:41'}, {'body': 'So this supposed ""Q*"" breakthrough could make the model better with math problems on the base model ? That could be really interesting for science and math, maybe it could actually start solving some weird math?', 'timestamp': '22-11-2023 17:29:58'}]",,
+Why is there no/minimal discussion about the sexual abuse accusations against Sam?,Sams sister has spoken publicly. Why does this not get any attention?,22-11-2023 22:37:56,26,"[{'body': 'Maybe because the laundry list of accusations including ""technological abuse"" don\'t sound especially plausible?\n\nFrom the article linked in the other comment it sounds like part of the claimed abuse was being read bed time stories as a four year old. I don\'t know where to even start with that.\n\nAnd apparently Sam spending a significant amount of money to make a diamond of their father\'s ashes for each family member was abuse because the package was heavy and she thinks he should have given her the money instead. Seriously?', 'timestamp': '23-11-2023 04:19:53'}, {'body': ""For a number of reasons. One, those accusations haven't led to criminal or even civil cases. Two, the witness appears extremely unreliable. Three, it's not really relevant to OpenAI unless one happens."", 'timestamp': '23-11-2023 05:08:02'}]",,
+Can we have AGI without UBI?,"I’m all for AGI/ASI, but if it’s literally going to take over the menial tasks, arguably huge percentages of the workforce became obsolete in a very quick amount of time. 
+
+So, people obviously need money to live, currency isn’t disappearing, so should UBI be a major priority in the regulation of AGI?",23-11-2023 02:29:41,142,"[{'body': ""We don't need AGI/ASI for that. Even the current state of GPT can replace a chunk of the workforce. \n\nSince not much people have currently lost their jobs to AI, there's not much pressure on governments to implement a UBI. The pressure will keep on rising until they will have to do something about it. Unfortunately governments usually work in a reactive manner and not a proactive one. A lot of people will need to lose their jobs before UBI will be considered."", 'timestamp': '23-11-2023 02:53:44'}, {'body': 'This is going to be a disaster, isn’t it.', 'timestamp': '23-11-2023 04:35:58'}]",,
+What is “open” about OpenAI?,"The models are not open, not are the weights, governance, or supervision.
+
+Also, how were the nee board of directors decided? Larry Summer is one of the members? How? What deep AI knowledge does he have?
+
+Did Sam’s stock ownership change when he came back?",23-11-2023 01:58:50,21,"[{'body': ""Openai was originally open source, but unfortunately the cost of scaling a LLM is so prohibitive that it requires immense investment - and you won't get immense investment if you are freely handing out your IP with no possible return on investment"", 'timestamp': '23-11-2023 03:18:47'}, {'body': 'The position of CEO.', 'timestamp': '23-11-2023 05:25:11'}]",,
+Looks like Ilya is still part of the team,,22-11-2023 15:38:12,32,"[{'body': 'This guy is essential, if he went somewhere else that’d almost be as bad as what happened the other day', 'timestamp': '22-11-2023 17:59:13'}, {'body': ""I'm glad. Ilya seems like a good person."", 'timestamp': '22-11-2023 17:57:20'}]",,
+The Q* theory is the only theory that makes the boards actions make any sense.,"I don’t pretend to understand Q* or reinforcement learning beyond an arm chair understanding. But, I’ve been wracking my brain trying to understand why the board would move so decisively. 
+
+If I was on a board that required 100% agreement to declare AGI and I was convinced that we had discovered AGI and after reading that letter and I knew that SamA had at the very least hid things from other teams or had multiple devs working on the same issue I would absolutely fire SamA too. 
+
+A violation to the very core of OpenAIs ethics would be the only thing that would make me fire my ceo that fast. It also explains the silence from the board, Ilya going along with it, and the rift breaking into the public. If they believe we’ve achieved AGI but can’t announce it according to their own charter I don’t know what else I would do other than fire SamA.",22-11-2023 23:40:35,48,"[{'body': 'Please quote where it says that they require 100% agreement to declare AGI.', 'timestamp': '23-11-2023 01:08:26'}, {'body': ""Is that in their charter that they can't announce it? I have not heard that and even if that was the case someone would leak it."", 'timestamp': '22-11-2023 23:52:01'}]",,
+How far away are we from AGI,Super impressed with the last update. Considering it’s been almost a year since the release of GPT 3 the advancement in one year seems pretty nuts to me. Are we closer to AGI than people think?,22-11-2023 20:55:31,52,"[{'body': 'Negative four/five months or so, apparently.', 'timestamp': '22-11-2023 21:03:03'}, {'body': 'Besides political setbacks both internally and externally with OpenAI, I think we’re much closer than even they thought we would be by now. \n\nAlso depends on the true definition of AGI, I think like GPT there will be levels of achievement, and level one is around the corner.', 'timestamp': '22-11-2023 21:09:30'}]",,
+The Giant Cube of Giza,,23-11-2023 08:34:19,0,[],<PIL.PngImagePlugin.PngImageFile image mode=RGB size=1792x1024 at 0x1B8974A7BE0>,
+Is project Q for real or they're just doing this to raise investment? Either way it's scary,"There's been reports that the recent firing of Sam Altman has been related to a groundbreaking research event, it's something called Q* ( Qstar) or project Q. There are several evidence which supports this theory where Sam himself is saying about being there, and also one where he says ""have we developed a tool or a creature?"".  Does anyone have any more updates on this??",23-11-2023 05:41:49,6,"[{'body': 'This is the same thing Google and deepmind are doing and it is not as dramatic as the EA cultists make it out to be', 'timestamp': '23-11-2023 07:58:55'}, {'body': ""We don't know. And frankly, it doesn't matter that much until it was released"", 'timestamp': '23-11-2023 06:56:51'}]",,
+What did they say to Ilya to get him onboard at first,Its wild to me that no one knew the boards reasoning yet Ilya went along with it at first. It makes me feel that there was a legitimate reason that isn't being shared still but Ilya realized he fucked 700 people out of millions of dollars,22-11-2023 16:24:06,41,"[{'body': 'According to [a NYT report on Tuesday](http://web.archive.org/web/20231122022842/https://www.nytimes.com/2023/11/21/technology/openai-altman-board-fight.html), it was because another board member was about to be removed in a replay of the Timnit Gebru firing:\n\n>> Mr. Altman, the chief executive, recently made a move to push out one of the board’s members because he thought a research paper she had co-written was critical of the company.\n\n>> Another member, Ilya Sutskever, who is also OpenAI’s chief scientist, thought Mr. Altman was not always being honest when talking with the board. And board members worried that Mr. Altman was too focused on expansion while they wanted to balance that growth with A.I. safety. [...]\n\n>> A few weeks before Mr. Altman’s ouster, he met with Ms. Toner to discuss a paper she had recently co-written for Georgetown University’s Center for Security and Emerging Technology.\n\n>> Mr. Altman complained that the research paper seemed to criticize OpenAI’s efforts to keep its A.I. technologies safe while praising the approach taken by Anthropic, according to an email that Mr. Altman wrote to colleagues and that was viewed by The New York Times.\n\n>>In the email, Mr. Altman said that he had reprimanded Ms. Toner for the paper and that it was dangerous to the company, particularly at a time, he added, when the Federal Trade Commission was investigating OpenAI over the data used to build its technology. [...]\n\n>> Senior OpenAI leaders, including Mr. Sutskever, who is deeply concerned that A.I. could one day destroy humanity, later discussed whether Ms. Toner should be removed, a person involved in the conversations said.\n\n>> But shortly after those discussions, Mr. Sutskever did the unexpected: He sided with board members to oust Mr. Altman, according to two people familiar with the board’s deliberations.\n\nThis narrative makes the most sense to me, because:\n\n- It shows the gross misalignment of the non-profit ""mission"" that the board is legally supposed to defend with the *current* for-profit goals of OpenAI.\n\n- It corroborates independent statements from OpenAI employees and Emmett Shear that it wasn\'t specifically about safety. If this narrative is true, this was about the *culture* of OpenAI and how it\'d impact the safety mission.\n\n- As someone with an academic background, Sutskever would be inclined to see Altman\'s actions in the same way as Toner did, which was to undermine Toner\'s *independence*, both as an academic and an independent director of OpenAI.', 'timestamp': '22-11-2023 22:50:11'}, {'body': 'You are getting very sleepy🌀', 'timestamp': '22-11-2023 16:31:42'}]",,
+There you go...,https://arxiv.org/abs/2102.04518,23-11-2023 00:19:04,11,"[{'body': 'And GPT-4 said:\n\n""In the context of training large language models (LLMs) like GPT-3, BERT, or similar architectures, the principles behind Q\\* search could potentially be applied in several ways:\n\n1. **Optimization of Decision Processes**: If an LLM is involved in decision-making tasks where it must choose from a vast number of possible actions (e.g., generating text with a large vocabulary or making strategic game moves), Q\\* search could be used to optimize the decision process by efficiently navigating through the large action space.\n2. **Sample Efficiency**: Training LLMs often requires a significant amount of data. By using Q\\* search, it might be possible to improve the sample efficiency of the training process by guiding the model to learn from more informative examples, thus potentially reducing the amount of data needed for effective training.\n3. **Exploration Strategies**: In reinforcement learning (RL), which is sometimes used to train LLMs for specific tasks, exploration of the action space is crucial. Q\\* search could be adapted to guide exploration strategies, ensuring that the model efficiently explores the action space without expending unnecessary computational resources.\n4. **Heuristic Learning**: The passage mentions the challenge of obtaining admissible heuristic functions from deep neural networks. In the training of LLMs, similar challenges arise when designing or learning heuristic functions that guide the model towards better performance. The principles behind Q\\* search could inspire new methods for learning such heuristics.\n5. **Scalability**: As LLMs grow in size and complexity, scalability becomes a critical concern. Q\\* search\'s ability to handle large action spaces with less computational overhead could be beneficial for scaling up LLMs or for deploying them in resource-constrained environments.\n6. **Problem-Solving Tasks**: For LLMs that are applied to problem-solving tasks, integrating Q\\* search could improve their ability to find solutions more efficiently, especially in domains characterized by large and complex action spaces.\n\nIt\'s important to note that while Q\\* search is described in the context of a search algorithm, its direct application to LLMs would require adaptation to the specific challenges and architectures of these models. The underlying idea of improving efficiency in large action spaces, however, is highly relevant to the field of AI and could inspire new approaches to training and deploying LLMs.""', 'timestamp': '23-11-2023 03:18:34'}, {'body': ""That's a cool paper even if it's not what the hubub is about."", 'timestamp': '23-11-2023 01:57:04'}]",,
+"Now that it's all said and done, let's talk about Effective Altruism (and why it is a societal cancer)","**Preface:** I had the great misfortune of living in an EA co-op when I first moved to the Bay because I was limited on housing options. Many of the EA organizations still run off of the dwindling store of fraudulent money that FTX pumped into them. As a result of this extremely poor housing choice, I know too much about this shitstain of a movement on society. You can see more about that specific saga in my first Reddit post if you're curious.
+
+**Ok, now for the post:**
+
+Sam has returned as CEO. The two Effective Altruists who were on the board have been banished to the shadow realm. Hooray, all is good?
+
+Not exactly.
+
+If you work in tech at all, you need to be on the lookout for anyone who presents themselves as ""EA"", ""Rationalist"", or uses words like ""x-risk"" or even a random buzzword like ""deterministic"". If they do, the chances they are part of this doomer cult of EA is pretty high.
+
+**Why is EA so damaging?**
+
+If you remember, Caroline Ellison, one of the central figures in the FTX fraud, gave testimony in Sam Bankman-Fried's trial. It's pretty well-covered in this article: [https://www.theringer.com/tech/2023/10/16/23919236/sam-bankman-fried-sbf-trial-caroline-ellison-testimony-ftx-cryptocurrency](https://www.theringer.com/tech/2023/10/16/23919236/sam-bankman-fried-sbf-trial-caroline-ellison-testimony-ftx-cryptocurrency)
+
+I want to highlight one specific part of that at the end, where Caroline talks about SBF having a different risk profile than other normal people.
+
+>Ellison said Sam had once claimed that “he would be happy to flip a coin, if it came up tails and the world was destroyed—as long as, if it came up heads, the world would be, like, more than twice as good.” When you’re assigning your own odds to everything, you can make them look however you like.
+
+There's another article I can't find right this moment, but it covers Caroline speaking about their mentality being essentially that the ends justify the means. So if they can create greater net benefit for society later on, then ANYTHING they do is moral and just. This could mean literally anything. In this case, it was massive fraud, but in other parts of EA it has meant literal rape and domestic violence. When you think in this way, it is extremely dangerous and destructive. You can rationalize *anything* you do as for the greater good.
+
+*Why is this important?*
+
+Because they were all Effective Altruists. Basically the entirety of FTX (well-documented at this point) was either EA or heavily EA-adjacent. This philosophy of **irrational rationalization** is what allowed them to commit such serious crimes and still claim the moral high ground the entire time.
+
+Well let me tell you man... the worst things you could ever do only look like the moral high ground if you're standing upside down, your head buried in the sand. Not a bad analogy for how EA people are.
+
+**But now the EA's are gone from OpenAI, so everything's good?**
+
+No. I want you to recall this article, which covers how the OpenAI board approached Anthropic about merging.
+
+[https://www.theinformation.com/articles/openai-approached-anthropic-about-merger](https://www.theinformation.com/articles/openai-approached-anthropic-about-merger)
+
+If you haven't heard of [Anthropic](https://en.wikipedia.org/wiki/Anthropic), it's essentially an OpenAI competitor but run from top-to-bottom by EAs. It was also funded to the tune of $500 million out of their total early funding of $700 million by.....
+
+**Alameda Research**. The fraud trading arm of FTX.
+
+Helen Toner and Tasha McCauley, the two board members who were forced to resign, were both EAs. But notice how Ilya is also not back on the board? Sam and Greg aren't either, but this is key.
+
+Ilya is also an EA. And the interim CEO and former Twitch co-founder who they tapped to lead OpenAI after firing Sam? Emmett Shear?
+
+Also an EA.
+
+You can probably already understand where I'm going with this, but this is a massive conflict of interest where EAs are trying to gain widespread control of the tech industry, as well as gaining influence over other parts of society at large. Recall that SBF wanted to be President of the United States, if you read the Ringer article I linked above in full? Well this doomer cult essentially wants to amass wealth, influence, and power for ""the greater good."" But the philosophy that backs it allows them to commit acts of absolute criminal destruction as the means to it.
+
+*This is an incredibly dangerous movement that people NEED to be wary of.*
+
+Before Sequoia dumped $213.5 million into FTX, EAs were in large part not so influential in Silicon Valley and the world at large. Now, with many of the funds FTX stole from customers redirected into EA organizations like Anthropic, this has changed.
+
+EAs now have a significant platform of influence in Silicon Valley. Even as major scandals that have hit global news cycles like FTX and now OpenAI being heavily driven by EA shittiness, they still retain that power. This isn't even to begin cracking the wave of smaller scandals like the outright misogyny, white wealthy privileged roots and racism, and string of sexual assaults in the EA community.
+
+FUCK MAN. Somehow this movement, like their mentality itself, is unshakeable by all the writing on the wall and evidence of destructive behavior.
+
+**Ok, so what now?**
+
+I made this post because I didn't see the EA angle being talked about enough. That's what drove this shit. Even articles talking about the paper that triggered this conflict is too indirect, that paper was contributed to by one of the board members because they're part of this EA AI-doomer cult. That, plus their ties to a direct competitor in Anthropic are such an obvious conflict-of-interest that I cannot believe this wasn't exposed until now.
+
+If you are in tech, and you see people like this, actively avoid them. The more we can avoid these people, the weaker their grip on influence and power to pull this kind of shit is. That's why I'm making this post. I hope to god that it gets seen.",22-11-2023 09:48:50,284,"[{'body': 'Every time I read these posts, I think: yeah, fuck Electric Arts, it’s a terrible company!', 'timestamp': '22-11-2023 11:15:00'}, {'body': '\\> a random buzzword like ""deterministic""\n\nI\'m sorry, what? This sounds like one of those oldy newspaper excerpts that say things like ""If your son talks about dungeons and dragons he is a satanist.""\n\nHow can someone work with anything related to random numbers and computers or physics or other branches of science and not use the word deterministic?\n\nThis undermines the whole rant. Now all I can think of is that you are scared of people saying things you don\'t understand.', 'timestamp': '22-11-2023 12:26:13'}]",,
+Ask: Who might be a good board member for OpenAI?,"Perhaps 3 categories:
+
+1) Good business people
+
+2) People who can help address some of the safety concerns of AI (cyber security, scams, manipulation and astroturfing, creating weapons, economic disruption)
+
+3) People who deeply understand AI scaling
+
+Who would you suggest for each of the categories?",23-11-2023 07:59:21,6,"[{'body': 'I vote ***Eliezer Yudkowsky*** and let the games begin.', 'timestamp': '23-11-2023 08:08:24'}, {'body': 'Me', 'timestamp': '23-11-2023 09:15:19'}]",,
+"Ilya (3 years ago) speaks about AGI as CEO, with humans as board members on Lex's podcast.",,23-11-2023 09:32:04,1,[],,
+"What the heck is a ""FROGE""?",,23-11-2023 07:46:47,4,"[{'body': '&#x200B;\n\nhttps://preview.redd.it/9vw7158ju32c1.png?width=388&format=png&auto=webp&s=8dfa07cfb50025e30dda6336968ef55a3a0e9f09', 'timestamp': '23-11-2023 08:08:38'}, {'body': 'Ai remix of doge', 'timestamp': '23-11-2023 09:20:28'}]",<PIL.PngImagePlugin.PngImageFile image mode=RGBA size=1488x1344 at 0x1B8971384C0>,"ia Greg Brockman @ @gdb - 10h oe
+spotted in the NYT today — froge is now famous:
+
+"
+Sam returns as CEO,,22-11-2023 00:05:12,356,"[{'body': 'Imagine being the guy that has to put up pictures in the entryway of all the CEOs of Open AI in order.', 'timestamp': '22-11-2023 00:30:07'}, {'body': 'Imagine if you went for a 5 day hike, came back, and it seems like nothing changed. But everything did in the meantime.', 'timestamp': '22-11-2023 00:27:41'}]",<PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1170x673 at 0x1B8974A6650>,"GS OpenAl % @OpenAlI - 1m
+We have reached an agreement in principle for
+Sam to return to OpenAl as CEO with a new
+initial board of Bret Taylor (Chair), Larry
+Summers, and Adam D'Angelo.
+
+We are collaborating to figure out the details.
+Thank you so much for your patience through
+this.
+
+© 231 TQ 558 @ 1.4K il 16K N
+"
+Helen Toner (now-former board) posts her first update since crisis,,22-11-2023 11:10:04,147,"[{'body': 'So wait, the new theory is that she’s the bad guy now, not Ilya or the Quora guy? \n\nShe’s the new villain?', 'timestamp': '22-11-2023 20:05:00'}, {'body': '*her first update since Satya slapdown.', 'timestamp': '22-11-2023 18:27:18'}]",,
+OpenAI: The Prime Directive,,23-11-2023 00:37:00,0,[],<PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=888x499 at 0x1B8974A7E20>,"PHase1 PHase2 PuHase 3
+
+DA ° gBENEFITS
+ALLOF
+near rene HUMANITY:
+
+ieghipieorn,
+"
+"I asked ChatGPT to write a power metal-song called ""Frog Invasion"" and Suno AI to make it into a song",,23-11-2023 05:07:45,12,"[{'body': 'I asked it to write the song six months ago and saw someone else post about Suno AI doing music. Full-on AI created music does my head in a bit.', 'timestamp': '23-11-2023 05:08:52'}, {'body': 'D&D sessions bout to get lit 🔥 😝', 'timestamp': '23-11-2023 08:21:22'}]",,
+Summed Up,,23-11-2023 00:51:58,0,[],<PIL.PngImagePlugin.PngImageFile image mode=RGBA size=324x689 at 0x1B8974A7D60>,"‘1st OpenAl CEO War
+
+Part of the Al Safety/Accelerationist Dispute and the
+2ist Century AGI Rush
+
+Bolligoronts
+OpenAl Employees
+
+OpenAl Board
+
+EE Microsoft
+‘Commanders and leaders
+
+@ samAtman @ iva sutskever
+Greg Brockman Helen Toner
+llya Sutskever @ Tasha McCauley
+
+Satya Nadelia @ Emmet shear
+Mia Murat ‘Adam D'Angelo
+@ Bret Taylor BEM Eon Musk
+Paul Graham
+‘Adam D'Angelo
+
+Casuattis and fo
+
+Casualties: Casualties:
+3,085 nights of sleep 3 resignations
+1 flawless reputation 10°80 future lives at risk
+
+‘trust of major partner 1 interim CEO
+
+Date 17 November ~ 21 November 2023
+(4 days, 12 hours)
+
+Location San Francisco, United States of America
+Online (Google Meet, X.com)
+
+Result Team Altman victory
+Resignation of the governance board
+Utter control of Microsoft over OpenAL
+land the future of mankind
+
+Location San Francisco, United States of America
+Online (Google Meet, X.com)
+
+Result Team Altman victory
+Resignation of the governance board
+Utter control of Microsoft over OpenAl
+and the future of mankind
+
+"
