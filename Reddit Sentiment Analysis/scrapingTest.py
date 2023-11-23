@@ -10,7 +10,7 @@ from io import BytesIO
 from PIL import Image
 import matplotlib.pyplot as plt
 import pytesseract
-import cv2
+import re
 
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
@@ -36,6 +36,14 @@ def convert_timestamp(timestamp_utc):
     #print(timestamp)
     return timestamp
 
+# Clean the extracted text
+def clean_text(text):
+    # Remove non-alphanumeric characters and extra whitespaces
+    cleaned_text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+    # Remove extra whitespaces and convert to lowercase
+    cleaned_text = ' '.join(cleaned_text.split()).lower()
+    return cleaned_text
+
 
 def download_images(image_urls):
     image_lst = []
@@ -47,7 +55,7 @@ def download_images(image_urls):
                 image_data = Image.open(BytesIO(response.content))
                 #image = cv2.imread(image_data, 0)
                 image_text = pytesseract.image_to_string(image_data)
-                image_text_lst.append(image_text)
+                image_text_lst.append(clean_text(image_text))
                 image_lst.append(image_data)
             else:
                 image_lst.append(None)
