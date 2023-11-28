@@ -20,6 +20,23 @@ print(df.head(), '\n')
 print(df['category'].value_counts())
 print()
 
+# Contar el número de comentarios negativos
+num_negative = df[df['category'] == -1].shape[0]
+
+# Filtrar aleatoriamente el mismo número de comentarios positivos y neutros
+positive_comments = df[df['category'] == 1].sample(n=num_negative, random_state=42)
+neutral_comments = df[df['category'] == 0].sample(n=num_negative, random_state=42)
+
+# Combinar los DataFrames resultantes
+df_balanced = pd.concat([positive_comments, neutral_comments, df[df['category'] == -1]])
+
+# Mezclar el DataFrame para que las muestras estén en orden aleatorio
+df_balanced = df_balanced.sample(frac=1, random_state=42).reset_index(drop=True)
+
+print(df_balanced.head(), '\n')
+print(df_balanced['category'].value_counts())
+print()
+
 # Step 2: Split the data into train, validation, and test sets
 train_data, temp_data = train_test_split(df, test_size=0.3, random_state=42)
 val_data, test_data = train_test_split(temp_data, test_size=1/3, random_state=42)
