@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import pytesseract
 import re
 
-
+# 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.quit()
 
