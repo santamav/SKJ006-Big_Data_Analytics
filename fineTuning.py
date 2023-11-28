@@ -17,3 +17,4 @@ df = pd.concat([df_reddit, df_twitter], ignore_index=True)
 
 print(df.head(), '\n')
 print(df['category'].value_counts())
+print()
