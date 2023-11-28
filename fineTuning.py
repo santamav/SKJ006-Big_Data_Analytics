@@ -9,32 +9,35 @@ reddit_dataset = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Anali
 twitter_dataset = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\Dataset\Twitter_Data.csv'
 output_dir = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics'
 
-# Load train and test dataset in a pandas dataframe
+## Load train and test dataset in a pandas dataframe
 df_reddit = pd.read_csv(reddit_dataset)
 df_twitter = pd.read_csv(twitter_dataset)
 
 # Concatenate both datasets in order to get a bigger dataset
 df = pd.concat([df_reddit, df_twitter], ignore_index=True)
 
+df = df.drop('clean_text', axis=1)
+df = df.rename(columns={'clean_comment': 'text', 'category': 'label'})
+
 print(df.head(), '\n')
-print(df['category'].value_counts())
+print(df['label'].value_counts())
 print()
 
 # Contar el número de comentarios negativos
-num_negative = df[df['category'] == -1].shape[0]
+num_negative = df[df['label'] == -1].shape[0]
 
 # Filtrar aleatoriamente el mismo número de comentarios positivos y neutros
-positive_comments = df[df['category'] == 1].sample(n=num_negative, random_state=42)
-neutral_comments = df[df['category'] == 0].sample(n=num_negative, random_state=42)
+positive_comments = df[df['label'] == 1].sample(n=num_negative, random_state=42)
+neutral_comments = df[df['label'] == 0].sample(n=num_negative, random_state=42)
 
 # Combinar los DataFrames resultantes
-df_balanced = pd.concat([positive_comments, neutral_comments, df[df['category'] == -1]])
+df_balanced = pd.concat([positive_comments, neutral_comments, df[df['label'] == -1]])
 
 # Mezclar el DataFrame para que las muestras estén en orden aleatorio
 df_balanced = df_balanced.sample(frac=1, random_state=42).reset_index(drop=True)
 
 print(df_balanced.head(), '\n')
-print(df_balanced['category'].value_counts())
+print(df_balanced['label'].value_counts())
 print()
 
 # Step 2: Split the data into train, validation, and test sets
