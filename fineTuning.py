@@ -102,11 +102,11 @@ class CustomDataCollator:
         }
 
 # Define training arguments
-batch_size = 12
+batch_size = 8
 logging_steps = len(train_data) // batch_size
 training_args = TrainingArguments(
     output_dir="sentiment_movies",
-    num_train_epochs=2,
+    num_train_epochs=1,
     learning_rate=2e-5,
     per_device_train_batch_size=batch_size,
     per_device_eval_batch_size=batch_size,
