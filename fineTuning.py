@@ -9,19 +9,20 @@ reddit_dataset = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Anali
 twitter_dataset = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\Dataset\Twitter_Data.csv'
 output_dir = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics'
 
-## Load train and test dataset in a pandas dataframe
+# Load train and test dataset in a pandas dataframe
 df_reddit = pd.read_csv(reddit_dataset)
 df_twitter = pd.read_csv(twitter_dataset)
+
+df_reddit = df_reddit.rename(columns={'clean_comment': 'text', 'category': 'label'})
+df_twitter = df_twitter.rename(columns={'clean_text': 'text', 'category': 'label'})
 
 # Concatenate both datasets in order to get a bigger dataset
 df = pd.concat([df_reddit, df_twitter], ignore_index=True)
 
-df = df.drop('clean_text', axis=1)
-df = df.rename(columns={'clean_comment': 'text', 'category': 'label'})
-
 print(df.head(), '\n')
 print(df['label'].value_counts())
 print()
+
 
 # Contar el número de comentarios negativos
 num_negative = df[df['label'] == -1].shape[0]
@@ -45,13 +46,10 @@ train_data, temp_data = train_test_split(df, test_size=0.3, random_state=42)
 val_data, test_data = train_test_split(temp_data, test_size=1/3, random_state=42)
 
 # Step 3: Get the tokenizer and the classification model
-
 model_name = "NousResearch/Llama-2-7b-chat-hf"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#model = AutoModelForMaskedLM.from_pretrained(model_name)
 model = (AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=3).to(device))
 
 
@@ -78,7 +76,6 @@ test_dataset = torch.utils.data.TensorDataset(
     torch.tensor(test_tokenized['attention_mask']),
     torch.tensor(test_data['label'].tolist())
 )
-
 
 
 # Step 4: Prepare the arguments of the trainer and set the trained object
@@ -132,7 +129,6 @@ trainer = Trainer(
     compute_metrics = compute_metrics,
     data_collator = CustomDataCollator()
 )
-
 
 
 # Step 5: Fine-tune the model
