@@ -1,6 +1,7 @@
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
-from transformers import AutoTokenizer, AutoModelForMaskedLM, AutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from transformers import Trainer, TrainingArguments
 from sklearn.metrics import accuracy_score, f1_score
@@ -18,6 +19,7 @@ df_twitter = df_twitter.rename(columns={'clean_text': 'text', 'category': 'label
 
 # Concatenate both datasets in order to get a bigger dataset
 df = pd.concat([df_reddit, df_twitter], ignore_index=True)
+df = df.dropna()
 
 print(df.head(), '\n')
 print(df['label'].value_counts())
@@ -37,16 +39,20 @@ df_balanced = pd.concat([positive_comments, neutral_comments, df[df['label'] == 
 # Mezclar el DataFrame para que las muestras estén en orden aleatorio
 df_balanced = df_balanced.sample(frac=1, random_state=42).reset_index(drop=True)
 
+# Convertir la columna 'label' a 'numpy.int64'
+df_balanced['label'] = df_balanced['label'].astype(np.int64)
+
 print(df_balanced.head(), '\n')
 print(df_balanced['label'].value_counts())
 print()
 
 # Step 2: Split the data into train, validation, and test sets
-train_data, temp_data = train_test_split(df, test_size=0.3, random_state=42)
-val_data, test_data = train_test_split(temp_data, test_size=1/3, random_state=42)
+train_data, temp_data = train_test_split(df, test_size=0.2, random_state=42)
+val_data, test_data = train_test_split(temp_data, test_size=0.5, random_state=42)
 
 # Step 3: Get the tokenizer and the classification model
-model_name = "NousResearch/Llama-2-7b-chat-hf"
+#model_name = "NousResearch/Llama-2-7b-chat-hf"
+model_name = "xlm-roberta-base"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -148,4 +154,4 @@ trainer.save_model(output_dir + "/model")
 #model.save_pretrained(output_dir)
 
 # Save tokenizer
-tokenizer.save_pretrained(output_dir + "tokenizer")
+tokenizer.save_pretrained(output_dir + "/tokenizer")
