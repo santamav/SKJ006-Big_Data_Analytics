@@ -11,6 +11,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import pytesseract
 import re
+import keyboard
+
 
 # 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
@@ -74,9 +76,14 @@ def get_subreddits():
     comments = []
     timestamp = []
     image_urls = []
+    i = 0
 
     # Scraping a Subreddit
-    for submission in reddit.subreddit('OpenAI').hot(limit=25):  #.top(time_filter="all")  .top(time_filter="day", limit=5)   .hot(limit=5)
+    for submission in reddit.subreddit('OpenAI').top(time_filter="all"):  #.top(time_filter="all")  .hot(limit=25)  .top(time_filter="day", limit=5)   .hot(limit=5)
+        
+        if keyboard.is_pressed('w'):
+            break
+        
         headlines.append(submission.title)
         body.append(submission.selftext)
         num_comments.append(submission.num_comments)
@@ -108,7 +115,50 @@ def get_subreddits():
             
         images, images_text = download_images(image_urls)
         
-    # To scrape different types of information use any of the following code lines: 
+        i += 1
+        print('SUBREDDITS: ', i)
+        
+
+        data = {
+            'head': headlines,
+            'body': body,
+            'timestamp': timestamp,
+            'num_comments': num_comments,
+            'comments': comments,
+            'images': images,
+            'text_images': images_text
+        }
+
+        df = pd.DataFrame(data)
+        #print(df)
+        #print(df['text_images'])
+        
+        
+        df.to_csv('subreddits.csv', index=False)
+    
+    #return df
+
+
+def main():
+    get_subreddits()
+    # Display images using matplotlib
+    #for index, row in df.iterrows():
+    #    # Check if the 'image_data' column contains image data
+    #    if row['images']:
+    #        plt.figure(figsize=(6, 6))
+    #        plt.imshow(row['images'])
+    #        plt.title(row['head'])
+    #        plt.show()
+    #df.to_csv('subreddits.csv', index=False)
+    
+
+if __name__ == "__main__":
+    main()
+    
+    
+    
+
+# To scrape different types of information use any of the following code lines: 
     """ 
     print(submission.selftext) 
     print(submission.title)
@@ -119,30 +169,3 @@ def get_subreddits():
     print(submission.url)
     print(submission.num_comments)
     """
-
-    data = {
-        'head': headlines,
-        'body': body,
-        'timestamp': timestamp,
-        'num_comments': num_comments,
-        'comments': comments,
-        'images': images,
-        'text_images': images_text
-    }
-
-    df = pd.DataFrame(data)
-    print(df)
-    #print(df['text_images'])
-    return df
-
-
-df = get_subreddits()
-# Display images using matplotlib
-for index, row in df.iterrows():
-    # Check if the 'image_data' column contains image data
-    if row['images']:
-        plt.figure(figsize=(6, 6))
-        plt.imshow(row['images'])
-        plt.title(row['head'])
-        plt.show()
-df.to_csv('subreddits.csv', index=False)
