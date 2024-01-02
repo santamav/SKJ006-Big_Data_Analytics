@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import pytesseract
 import re
 import keyboard
+import time
 
 
 # 
@@ -68,7 +69,7 @@ def download_images(image_urls):
     return image_lst, image_text_lst
 
 
-def get_subreddits():
+def get_subreddits(im):
     # Initialize empty lists to store data
     headlines = []
     body = []
@@ -79,68 +80,83 @@ def get_subreddits():
     i = 0
 
     # Scraping a Subreddit
-    for submission in reddit.subreddit('OpenAI').top(time_filter="all"):  #.top(time_filter="all")  .hot(limit=25)  .top(time_filter="day", limit=5)   .hot(limit=5)
+    submissions = reddit.subreddit('OpenAI').hot(limit=100000) #.top(time_filter="all")  .hot(limit=25)  .top(time_filter="day", limit=5)   .hot(limit=5)
+    for submission in submissions:  
         
         if keyboard.is_pressed('w'):
             break
         
-        headlines.append(submission.title)
-        body.append(submission.selftext)
-        num_comments.append(submission.num_comments)
-        timestamp.append(convert_timestamp(submission.created_utc))
-        #print('HEADLINES: ', headlines)
-        #print ('NUM_COMMENTS: ', num_comments)
+        try:
+            headlines.append(submission.title)
+            body.append(submission.selftext)
+            num_comments.append(submission.num_comments)
+            timestamp.append(convert_timestamp(submission.created_utc))
+            #print('HEADLINES: ', headlines)
+            #print ('NUM_COMMENTS: ', num_comments)
 
-        # Initialize empty list for comments of each submission
-        submission_comments = []
+            # Initialize empty list for comments of each submission
+            submission_comments = []
 
-        # Iterate through the top-level comments of the submission (limit to 2 comments)
-        for comment in submission.comments[:2]:
-            # Check if the comment is a top-level comment (not a reply)
-            if isinstance(comment, praw.models.Comment):
-                submission_comments.append({
-                    'body': comment.body,
-                    'timestamp': convert_timestamp(comment.created_utc)
-                    })
+            # Iterate through the top-level comments of the submission (limit to 2 comments: submission.comments[:2])
+            for comment in submission.comments[:]:
+                # Check if the comment is a top-level comment (not a reply)
+                if isinstance(comment, praw.models.Comment):
+                    submission_comments.append({
+                        'body': comment.body,
+                        'timestamp': convert_timestamp(comment.created_utc)
+                        })
 
-        comments.append(submission_comments)
-        #print ('COMMENTS: ', comments, '\n')
-        
-        # Check if the submission has a URL (to filter out text-only posts)
-        url = str(submission.url)
-        if url.endswith("jpg") or url.endswith("jpeg") or url.endswith("png"):
-            image_urls.append(url)
-        else:
-            image_urls.append(None)
+            comments.append(submission_comments)
+            #print ('COMMENTS: ', comments, '\n')
             
-        images, images_text = download_images(image_urls)
-        
-        i += 1
-        print('SUBREDDITS: ', i)
-        
+            if im:
+                # Check if the submission has a URL (to filter out text-only posts)
+                url = str(submission.url)
+                if url.endswith("jpg") or url.endswith("jpeg") or url.endswith("png"):
+                    image_urls.append(url)
+                else:
+                    image_urls.append(None)
+                    
+                images, images_text = download_images(image_urls)
+            
+                data = {
+                    'head': headlines,
+                    'body': body,
+                    'timestamp': timestamp,
+                    'num_comments': num_comments,
+                    'comments': comments,
+                    'images': images,
+                    'text_images': images_text
+                }
+            else:
+                data = {
+                    'head': headlines,
+                    'body': body,
+                    'timestamp': timestamp,
+                    'num_comments': num_comments,
+                    'comments': comments
+                }
 
-        data = {
-            'head': headlines,
-            'body': body,
-            'timestamp': timestamp,
-            'num_comments': num_comments,
-            'comments': comments,
-            'images': images,
-            'text_images': images_text
-        }
-
-        df = pd.DataFrame(data)
-        #print(df)
-        #print(df['text_images'])
-        
-        
-        df.to_csv('subreddits.csv', index=False)
+            df = pd.DataFrame(data)
+            #print(df)
+            #print(df['text_images'])
+            
+            df.to_csv('subreddits.csv', index=False)
+            
+            i += 1
+            print('SUBREDDITS: ', i)
+            
+        except Exception as e:
+            print(f"Error al obtener el subreddit: {e}")
+            
+        time.sleep(1)
     
     #return df
 
 
 def main():
-    get_subreddits()
+    images = False
+    get_subreddits(images)
     # Display images using matplotlib
     #for index, row in df.iterrows():
     #    # Check if the 'image_data' column contains image data
