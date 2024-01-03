@@ -9,7 +9,8 @@ from datasets import Dataset, DatasetDict
 
 reddit_dataset = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\Dataset\Reddit_Data.csv'
 twitter_dataset = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\Dataset\Twitter_Data.csv'
-output_dir = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics'
+model_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\reddit_model'
+tokenizer_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\reddit_tokenizer'
 model_name = "xlm-roberta-base"
 
 
@@ -76,6 +77,7 @@ def split_data(df):
 
 def tokenize_dataset(dataset):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer.save_pretrained(tokenizer_directory)
 
     def tokenize_function(examples):
         return tokenizer(examples["text"], padding="max_length", truncation=True)
@@ -132,7 +134,7 @@ def eval(trainer, test_dataset):
     
 def save_trained_model(trainer, output_dir):
     # Save model and weights
-    trainer.save_model(output_dir + "/reddit_model")
+    trainer.save_model(output_dir)
 
 
 def main():
@@ -143,7 +145,7 @@ def main():
     trainer = init_trainer(train_dataset, val_dataset)    
     trainer.train()
     eval(trainer, test_dataset)
-    save_trained_model(trainer, output_dir)
+    save_trained_model(trainer, model_directory)
     
     
 if __name__== "__main__":

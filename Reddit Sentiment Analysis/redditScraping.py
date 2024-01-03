@@ -79,9 +79,8 @@ def get_subreddits(im):
     image_urls = []
     i = 0
 
-    # Scraping a Subreddit
-    submissions = reddit.subreddit('OpenAI').hot(limit=100000) #.top(time_filter="all")  .hot(limit=25)  .top(time_filter="day", limit=5)   .hot(limit=5)
-    for submission in submissions:  
+    # Scraping a Subreddit 
+    for submission in reddit.subreddit('OpenAI').hot(limit=1000):  #.top(time_filter="all")  .hot(limit=25)  .top(time_filter="day", limit=5)   .hot(limit=5)
         
         if keyboard.is_pressed('w'):
             break
@@ -91,8 +90,6 @@ def get_subreddits(im):
             body.append(submission.selftext)
             num_comments.append(submission.num_comments)
             timestamp.append(convert_timestamp(submission.created_utc))
-            #print('HEADLINES: ', headlines)
-            #print ('NUM_COMMENTS: ', num_comments)
 
             # Initialize empty list for comments of each submission
             submission_comments = []
@@ -105,9 +102,7 @@ def get_subreddits(im):
                         'body': comment.body,
                         'timestamp': convert_timestamp(comment.created_utc)
                         })
-
             comments.append(submission_comments)
-            #print ('COMMENTS: ', comments, '\n')
             
             if im:
                 # Check if the submission has a URL (to filter out text-only posts)
@@ -138,11 +133,7 @@ def get_subreddits(im):
                 }
 
             df = pd.DataFrame(data)
-            #print(df)
-            #print(df['text_images'])
-            
             df.to_csv('subreddits.csv', index=False)
-            
             i += 1
             print('SUBREDDITS: ', i)
             
@@ -150,8 +141,6 @@ def get_subreddits(im):
             print(f"Error al obtener el subreddit: {e}")
             
         time.sleep(1)
-    
-    #return df
 
 
 def main():
