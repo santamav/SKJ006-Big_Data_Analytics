@@ -3,8 +3,8 @@ import ast
 import pandas as pd
 
 
-model_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\reddit_model'
-tokenizer_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\reddit_tokenizer'
+model_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\reddit_model'
+tokenizer_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\reddit_tokenizer'
 reddit_data_directory = r'C:\Users\gonza\OneDrive\Escritorio\master_2023\Big_Data_Analitycs\Sistemes-Intelligents_Big-Data-Analytics\subreddits.csv'
 
 classifier = pipeline(
